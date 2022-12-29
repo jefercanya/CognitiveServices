@@ -1,0 +1,2 @@
+E:\LSData\Net Core\Cognitive_Services\Kiosk\Kiosk\IntelligentKioskSample.csproj;x64
+E:\LSData\Net Core\Cognitive_Services\Kiosk\Kiosk\ServiceHelpers\ServiceHelpers.csproj;neutral

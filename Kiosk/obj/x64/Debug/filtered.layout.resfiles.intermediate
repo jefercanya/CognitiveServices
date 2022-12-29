@@ -1,0 +1,199 @@
+WinMetadata\Windows.winmd
+Assets\AnomalyDetector\AnomalyDetector-Bike.csv
+Assets\AnomalyDetector\AnomalyDetector-Manufacture.csv
+Assets\AnomalyDetector\AnomalyDetector-Telcom.csv
+Assets\AnomalyDetector\BikeSharing.png
+Assets\AnomalyDetector\LiveSound.png
+Assets\AnomalyDetector\Manufacturing.jpg
+Assets\AnomalyDetector\Telcom.png
+Assets\AudioSamples\Baryonyx.wav
+Assets\AudioSamples\ClassQX_F.wav
+Assets\AudioSamples\de-de-1.wav
+Assets\AudioSamples\de-de-2.wav
+Assets\AudioSamples\es-es-1.wav
+Assets\AudioSamples\es-es-2.wav
+Assets\AudioSamples\Fare4Denver_M.wav
+Assets\AudioSamples\fr-fr-1.wav
+Assets\AudioSamples\it-it-1.wav
+Assets\AudioSamples\it-it-2.wav
+Assets\AudioSamples\ru-ru-1.wav
+Assets\AudioSamples\ru-ru-2.wav
+Assets\AudioSamples\zh-cn-1.wav
+Assets\AudioSamples\zh-cn-2.wav
+Assets\captionbot.png
+Assets\DemoGallery\Anomaly detector.jpg
+Assets\DemoGallery\Bing News Analytics.jpg
+Assets\DemoGallery\Bing Visual Search.jpg
+Assets\DemoGallery\Caption Bot.jpg
+Assets\DemoGallery\Custom Vision Explorer.jpg
+Assets\DemoGallery\Face API Explorer.jpg
+Assets\DemoGallery\Forms Recognizer.jpg
+Assets\DemoGallery\Greeting Kiosk.jpg
+Assets\DemoGallery\How Old.jpg
+Assets\DemoGallery\Image Collection Insights.jpg
+Assets\DemoGallery\InsuranceClaimAutomation.jpg
+Assets\DemoGallery\Mall Kiosk.jpg
+Assets\DemoGallery\Neural Text To Speech.jpg
+Assets\DemoGallery\Realtime Crowd Insights.jpg
+Assets\DemoGallery\Realtime Driver Monitoring.jpg
+Assets\DemoGallery\Realtime Image Classification Demo.jpg
+Assets\DemoGallery\Realtime Object Detection.jpg
+Assets\DemoGallery\Realtime Video Insights.jpg
+Assets\DemoGallery\Speaker Recognition Explorer.jpg
+Assets\DemoGallery\Speech to Text Explorer.jpg
+Assets\DemoGallery\Text Analytics Explorer.jpeg
+Assets\DemoGallery\Translation Demo.jpg
+Assets\DemoGallery\Vision API Explorer.jpg
+Assets\DemoGallery\VisualAlertBuilder.jpg
+Assets\DemoSamples\BingVisualSearch\1.jpg
+Assets\DemoSamples\BingVisualSearch\11.jpg
+Assets\DemoSamples\BingVisualSearch\12.jpg
+Assets\DemoSamples\BingVisualSearch\13.jpg
+Assets\DemoSamples\BingVisualSearch\3.jpg
+Assets\DemoSamples\BingVisualSearch\4.jpg
+Assets\DemoSamples\FaceApiExplorer\1.jpg
+Assets\DemoSamples\FaceApiExplorer\2.jpg
+Assets\DemoSamples\FaceApiExplorer\3.jpg
+Assets\DemoSamples\FaceApiExplorer\4.jpg
+Assets\DemoSamples\FaceApiExplorer\5.jpg
+Assets\DemoSamples\FormRecognizer\1.jpg
+Assets\DemoSamples\FormRecognizer\1_1.jpg
+Assets\DemoSamples\FormRecognizer\2.jpg
+Assets\DemoSamples\FormRecognizer\3.jpg
+Assets\DemoSamples\FormRecognizer\3_1.jpg
+Assets\DemoSamples\FormRecognizer\4.jpg
+Assets\DemoSamples\FormRecognizer\contoso-allinone.jpg
+Assets\DemoSamples\InsuranceClaimAutomation\1.jpg
+Assets\DemoSamples\InsuranceClaimAutomation\2.jpg
+Assets\DemoSamples\InsuranceClaimAutomation\3.jpg
+Assets\DemoSamples\InsuranceClaimAutomation\4.jpg
+Assets\DemoSamples\InsuranceClaimAutomation\Form1.jpg
+Assets\DemoSamples\InsuranceClaimAutomation\Form2.jpg
+Assets\DemoSamples\InsuranceClaimAutomation\Form3.jpg
+Assets\DemoSamples\InsuranceClaimAutomation\Form4.jpg
+Assets\DemoSamples\InsuranceClaimAutomation\Form5.jpg
+Assets\DemoSamples\TranslatorExplorer\1.png
+Assets\DemoSamples\TranslatorExplorer\2.png
+Assets\DemoSamples\VisionApiExplorer\1.jpg
+Assets\DemoSamples\VisionApiExplorer\2.jpg
+Assets\DemoSamples\VisionApiExplorer\3.jpg
+Assets\DemoSamples\VisionApiExplorer\4.jpg
+Assets\DemoSamples\VisionApiExplorer\5.jpg
+Assets\DemoSamples\VisionApiExplorer\6.png
+Assets\DemoSamples\VisionApiExplorer\7.png
+Assets\DemoSamples\VisionApiExplorer\8.png
+Assets\favorites_empty.png
+Assets\female.png
+Assets\ImageCollectionInsights.JPG
+Assets\InsuranceClaimAutomation\icon-F780-64.jpg
+Assets\male.png
+Assets\male_blue.png
+Assets\mixed_items.onnx
+Assets\photo-icon.png
+Assets\simple_fruits.onnx
+Assets\smalltile-sdk.png
+Assets\splash-sdk.png
+Assets\squaretile-sdk.png
+Assets\squaretile-sdk-44.png
+Assets\StoreLogo.png
+Assets\StoreLogo.scale-10.png
+App.xbf
+AppShell.xbf
+Controls\AgeGenderDistributionControl.xbf
+Controls\CameraControl.xbf
+Controls\CenteredVerticalBarControl.xbf
+Controls\DataGridControl.xbf
+Controls\DeviceAccessErrorDialog.xbf
+Controls\EmotionEmojiControl.xbf
+Controls\EmotionResponseStackBarControl.xbf
+Controls\EmotionResponseTimelineControl.xbf
+Controls\EmotionToColoredBar.xbf
+Controls\FaceIdentificationModelUpdateDialog.xbf
+Controls\HorizontalStackedBarChartControl.xbf
+Controls\ImagePickerControl.xbf
+Controls\ImageSearchUserControl.xbf
+Controls\LeftRightScrollViewer.xbf
+Controls\LifecycleControl.xbf
+Controls\NotificationControl.xbf
+Controls\NumericUpDown.xbf
+Controls\OCRBorder.xbf
+Controls\OverallStatsControl.xbf
+Controls\Overlays\CustomVisionOverlayPresenter.xbf
+Controls\Overlays\FormRecognizerOverlayPresenter.xbf
+Controls\Overlays\OverlayResources.xbf
+Controls\Overlays\Primitives\OverlayControl.xbf
+Controls\Overlays\Primitives\OverlayItemsControl.xbf
+Controls\Overlays\Primitives\OverlayLabel.xbf
+Controls\Overlays\Primitives\OverlayPresenter.xbf
+Controls\Overlays\VisionApiOverlayPresenter.xbf
+Controls\PdfViewerControl.xbf
+Controls\RealTimeFaceIdentificationBorder.xbf
+Controls\SentimentControl.xbf
+Controls\SentimentDistributionControl.xbf
+Controls\SpeechToTextControl.xbf
+Controls\TagScoreControl.xbf
+Controls\UpDownVerticalBarControl.xbf
+Controls\VerticalBarTimelineControl.xbf
+Controls\VerticalBarWithValueControl.xbf
+Controls\VideoTrack.xbf
+IntelligentKioskSample.xr.xml
+Styles\Styles.xbf
+Themes\Generic.xbf
+Views\AnomalyDetector\AnomalyChartControl.xbf
+Views\AnomalyDetector\AnomalyDetectorDemo.xbf
+Views\AnomalyDetector\ScenarioInfoControl.xbf
+Views\BingNewsAnalytics.xbf
+Views\BingVisualSearch.xbf
+Views\CaptionKioskPage.xbf
+Views\CustomVision\CustomVisionExplorer.xbf
+Views\CustomVision\CustomVisionSetup.xbf
+Views\CustomVision\ImageWithRegionEditorsControl.xbf
+Views\CustomVision\RegionEditorControl.xbf
+Views\CustomVision\ThumbnailWithRegionsControl.xbf
+Views\DemoLauncher\DemoCollectionBanner.xbf
+Views\DemoLauncher\DemoCollectionControl.xbf
+Views\DemoLauncher\DemoLauncherPage.xbf
+Views\DigitalAssetManagement\DigitalAssetManagementPage.xbf
+Views\DigitalAssetManagement\StorageDialog.xbf
+Views\FaceApiExplorer\FaceApiExplorerPage.xbf
+Views\FaceApiExplorer\FaceLandmarksControl.xbf
+Views\FaceApiExplorer\FacePoseControl.xbf
+Views\FaceIdentificationSetup.xbf
+Views\FormRecognizer\FormRecognizerExplorer.xbf
+Views\FormRecognizer\FormRecognizerScenarioSetup.xbf
+Views\FormRecognizer\HighlightField.xbf
+Views\FormRecognizer\InitialView.xbf
+Views\FormRecognizer\ReceiptView.xbf
+Views\GreetingKiosk.xbf
+Views\HowOldKioskPage.xbf
+Views\InsuranceClaimAutomation\DetailsViewControl.xbf
+Views\InsuranceClaimAutomation\InputPickerControl.xbf
+Views\InsuranceClaimAutomation\InsuranceClaimAutomation.xbf
+Views\MallKioskPage.xbf
+Views\NeuralTTS\NeuralTTS.xbf
+Views\RealTimeDemo.xbf
+Views\RealtimeDriverMonitoring.xbf
+Views\RealtimeImageClassification.xbf
+Views\RealtimeObjectDetection.xbf
+Views\SettingsPage.xbf
+Views\SpeakerRecognition\SpeakerRecognitionExplorer.xbf
+Views\SpeakerRecognition\SpeakerRecognitionModelSetup.xbf
+Views\SpeechToText\InitialView.xbf
+Views\SpeechToText\SpeechToTextExplorer.xbf
+Views\SpeechToText\SpeechToTextView.xbf
+Views\SpeechToText\SpeechToTextWithTranslation.xbf
+Views\TextAnalyticsExplorer\TextAnalyticsExplorer.xbf
+Views\TranslatorExplorer\AlternativeTranslationsControl.xbf
+Views\TranslatorExplorer\TranslatorExplorerPage.xbf
+Views\VideoInsights\TagFilterControl.xbf
+Views\VideoInsights\VideoInsightsPage.xbf
+Views\VisionApiExplorer.xbf
+Views\VisualAlert\VisualAlertBuilderPage.xbf
+Views\VisualAlert\VisualAlertBuilderWizardControl.xbf
+Properties\Default.rd.xml
+Views\CustomVision\BuiltInClassificationModels.json
+Views\CustomVision\BuiltInObjectDetectionModels.json
+Views\FormRecognizer\BuiltInModels.json
+Views\MallKioskDemoConfig\MallKioskDemoSettings.xml
+Views\NeuralTTS\NeuralVoices.json
+Views\TextAnalyticsExplorer\TextSamples.json

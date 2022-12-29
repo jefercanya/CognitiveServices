@@ -1,0 +1,208 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="IntelligentKioskSample.Views.DemoLauncher.DemoLauncherPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IntelligentKioskSample.Views.DemoLauncher"
+    xmlns:ctl="using:IntelligentKioskSample.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="launcher"
+    IsTabStop="True"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ctl:BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter"/>
+        <ctl:ReverseBooleanToVisibilityConverter x:Key="reverseBooleanToVisibilityConverter" />
+        <ctl:StringFormatConverter StringFormat="See all {0}" x:Key="seeAllWithCountConverter" />
+        <ctl:StringLengthToVisibilityConverter x:Key="stringLengthToVisibilityConverter"/>
+        <ctl:CollectionCountToVisibilityConverter x:Key="collectionCountToVisibilityConverter"/>
+        <ctl:ReverseStringLengthToVisibilityConverter x:Key="reverseStringLengthToVisibilityConverter"/>
+
+        <Style x:Key="DemoGallerySearchTextBoxStyle" TargetType="TextBox" >
+            <Setter Property="Background" Value="#ff808080"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="PlaceholderForeground" Value="#ff333333"/>
+            <Setter Property="Padding" Value="10,5,0,0"/>
+        </Style>
+
+        <Style x:Key="PageTitleHyperlinkButtonStyle" TargetType="HyperlinkButton">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style x:Key="PageSubTitleTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <CommandBar x:ConnectionId='2' x:Name="commandBar" HorizontalContentAlignment="Stretch" IsDynamicOverflowEnabled="False" Grid.ColumnSpan="3" DefaultLabelPosition="Right"  >
+
+            <AppBarButton x:ConnectionId='16' Icon="Find" Label="Search"                                     Visibility="{Binding IsSearchBarEnable, Converter={StaticResource reverseBooleanToVisibilityConverter}}"/>
+
+            <CommandBar.Content>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Title -->
+                    <TextBlock Grid.Column="0" Text="{Binding Title}" Style="{ThemeResource PageTitleTextBlockStyle}" Margin="14,10,12,0" 
+                               Visibility="{Binding SubTitle, Converter={StaticResource reverseStringLengthToVisibilityConverter}}"/>
+
+                    <!-- Title + SubTitle -->
+                    <StackPanel Grid.Column="0" Margin="14,3,0,0" Orientation="Horizontal" VerticalAlignment="Stretch" 
+                                Visibility="{Binding SubTitle, Converter={StaticResource stringLengthToVisibilityConverter}}">
+                        <HyperlinkButton x:ConnectionId='18'                                             
+                                         Style="{ThemeResource PageTitleHyperlinkButtonStyle}">
+                            <TextBlock Text="Demo Gallery"/>
+                        </HyperlinkButton>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE76C;" Foreground="White" FontSize="12" Margin="6,1,6,0" />
+                        <TextBlock Text="{Binding SubTitle, Mode=TwoWay}" Style="{ThemeResource PageSubTitleTextBlockStyle}"/>
+                    </StackPanel>
+
+                    <!-- Search box -->
+                    <AutoSuggestBox x:ConnectionId='17' Grid.Column="1" Margin="0,4,0,0" x:Name="searchTextBox" Width="400" VerticalAlignment="Center" HorizontalAlignment="Right" 
+                                    QueryIcon="Find" PlaceholderText="Search..."                                        
+                                                                        TextBoxStyle="{StaticResource DemoGallerySearchTextBoxStyle}"
+                                    Visibility="{Binding IsSearchBarEnable, Converter={StaticResource booleanToVisibilityConverter}}"/>
+                </Grid>
+            </CommandBar.Content>
+
+        </CommandBar>
+
+        <Grid Grid.Row="1" HorizontalAlignment="Stretch">
+            <Grid.Resources>
+                <Style x:Key="CollectionPanelStyle" TargetType="StackPanel">
+                    <Setter Property="Margin" Value="0,12,0,36"/>
+                </Style>
+                <Style x:Key="TitlePanelStyle" TargetType="StackPanel">
+                    <Setter Property="Orientation" Value="Horizontal"/>
+                    <Setter Property="Margin" Value="27,0,0,6"/>
+                </Style>
+                <Style x:Key="TitleStyle" TargetType="TextBlock" BasedOn="{StaticResource SubtitleTextBlockStyle}">
+                    <Setter Property="TextWrapping" Value="NoWrap"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="Margin" Value="0,0,24,0"/>
+                </Style>
+                <Style TargetType="local:DemoCollectionControl">
+                    <Setter Property="Margin" Value="28,0,36,0"/>
+                </Style>
+            </Grid.Resources>
+
+            <!-- View: all collections -->
+            <ListView ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.HorizontalScrollMode="Disabled" SelectionMode="None"
+                      Visibility="{Binding IsMainPage, Converter={StaticResource booleanToVisibilityConverter}}">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Padding" Value="0"/>
+                        <Setter Property="Margin" Value="0"/>
+                        <Setter Property="MinHeight" Value="0"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+
+                <!-- Recently used demos by user -->
+                <StackPanel Style="{StaticResource CollectionPanelStyle}"
+                            Visibility="{Binding RecentlyUsedDemos.Count, Converter={StaticResource collectionCountToVisibilityConverter}}">
+                    <StackPanel Style="{StaticResource TitlePanelStyle}">
+                        <TextBlock Text="Your recent demos" Style="{ThemeResource TitleStyle}"/>
+                        <HyperlinkButton x:ConnectionId='15' Content="{Binding RecentlyUsedDemos.Count, Converter={StaticResource seeAllWithCountConverter}}"
+                                         CommandParameter="RecentlyUsed"                                            />
+                    </StackPanel>
+                    <local:DemoCollectionControl x:ConnectionId='14' DemoEntries="{Binding RecentlyUsedDemos}" EnableHorizontalView="True"                                                                      />
+                </StackPanel>
+
+                 <!-- New demos (added/updated within the last 90 days --> 
+                <StackPanel Style="{StaticResource CollectionPanelStyle}"
+                            Visibility="{Binding NewOrUpdatedDemos.Count, Converter={StaticResource collectionCountToVisibilityConverter}}">
+                    <StackPanel Style="{StaticResource TitlePanelStyle}">
+                        <TextBlock Text="What's new" Style="{ThemeResource TitleStyle}"/>
+                        <HyperlinkButton x:ConnectionId='13' Content="{Binding NewOrUpdatedDemos.Count, Converter={StaticResource seeAllWithCountConverter}}" 
+                                         CommandParameter="NewOrUpdated"                                            />
+                    </StackPanel>
+
+                    <local:DemoCollectionControl x:ConnectionId='12' DemoEntries="{Binding NewOrUpdatedDemos}" EnableHorizontalView="True"                                                                      />
+                </StackPanel>
+
+                <!-- Vision demos -->
+                <StackPanel Style="{StaticResource CollectionPanelStyle}" 
+                            Visibility="{Binding VisionDemos.Count, Converter={StaticResource collectionCountToVisibilityConverter}}">
+                    <StackPanel Style="{StaticResource TitlePanelStyle}">
+                        <TextBlock Text="Vision" Style="{ThemeResource TitleStyle}"/>
+                        <HyperlinkButton x:ConnectionId='11' Content="{Binding VisionDemos.Count, Converter={StaticResource seeAllWithCountConverter}}" 
+                                         CommandParameter="Vision"                                            />
+                    </StackPanel>
+
+                    <local:DemoCollectionControl x:ConnectionId='10' DemoEntries="{Binding VisionDemos}" EnableHorizontalView="True"                                                                      />
+                </StackPanel>
+
+                <!-- Search demos -->
+                <StackPanel Style="{StaticResource CollectionPanelStyle}" 
+                            Visibility="{Binding SearchDemos.Count, Converter={StaticResource collectionCountToVisibilityConverter}}">
+                    <StackPanel Style="{StaticResource TitlePanelStyle}">
+                        <TextBlock Text="Decision and Search" Style="{ThemeResource TitleStyle}"/>
+                        <HyperlinkButton x:ConnectionId='9' Content="{Binding SearchDemos.Count, Converter={StaticResource seeAllWithCountConverter}}" 
+                                         CommandParameter="Search"                                            />
+                    </StackPanel>
+
+                    <local:DemoCollectionControl x:ConnectionId='8' DemoEntries="{Binding SearchDemos}" EnableHorizontalView="True"                                                                      />
+                </StackPanel>
+
+                <!-- Language and Speech demos -->
+                <StackPanel Style="{StaticResource CollectionPanelStyle}" 
+                            Visibility="{Binding LanguageAndSpeechDemos.Count, Converter={StaticResource collectionCountToVisibilityConverter}}">
+                    <StackPanel Style="{StaticResource TitlePanelStyle}">
+                        <TextBlock Text="Language and Speech" Style="{ThemeResource TitleStyle}"/>
+                        <HyperlinkButton x:ConnectionId='7' Content="{Binding LanguageAndSpeechDemos.Count, Converter={StaticResource seeAllWithCountConverter}}" 
+                                         CommandParameter="LanguageAndSpeech"                                            />
+                    </StackPanel>
+
+                    <local:DemoCollectionControl x:ConnectionId='6' DemoEntries="{Binding LanguageAndSpeechDemos}" EnableHorizontalView="True"                                                                      />
+                </StackPanel>
+
+                 <!-- Social photo booth demos --> 
+                <StackPanel Style="{StaticResource CollectionPanelStyle}" 
+                            Visibility="{Binding SocialPhotoBoothsDemos.Count, Converter={StaticResource collectionCountToVisibilityConverter}}">
+                    <StackPanel Style="{StaticResource TitlePanelStyle}">
+                        <TextBlock Text="Social Photo Booths" Style="{ThemeResource TitleStyle}"/>
+                        <HyperlinkButton x:ConnectionId='5' Content="{Binding SocialPhotoBoothsDemos.Count, Converter={StaticResource seeAllWithCountConverter}}" 
+                                         CommandParameter="SocialPhotoBooths"                                            />
+                    </StackPanel>
+
+                    <local:DemoCollectionControl x:ConnectionId='4' DemoEntries="{Binding SocialPhotoBoothsDemos}" EnableHorizontalView="True"                                                                      />
+                </StackPanel>
+            </ListView>
+
+            <!-- View: particular collection -->
+            <ScrollViewer Visibility="{Binding IsMainPage, Converter={StaticResource reverseBooleanToVisibilityConverter}}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <local:DemoCollectionBanner DemoCollectionGroup="{Binding DemoCollectionGroup}"/>
+                    <local:DemoCollectionControl x:ConnectionId='3' Grid.Row="1" DemoEntries="{Binding GalleryDemos}" Margin="28,28,0,0" 
+                                                              
+                                                                               
+                                    DemoCollectionGroup="{Binding DemoCollectionGroup}"/>
+                </Grid>
+            </ScrollViewer>
+
+        </Grid>
+    </Grid>
+</Page>
+
